@@ -1,13 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-  <modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.xml</groupId>
-  <artifactId>DoIt</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <name>DoIt</name>
-  <description>因为市面上的TO-DO工具都感觉缺点意思，所以打算自己做一个，希望能有空闲时间将这个项目做完！</description>
+    <groupId>com.xml</groupId>
+    <artifactId>DoIt</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
+    <name>DoIt</name>
+    <description>因为市面上的TO-DO工具都感觉缺点意思，所以打算自己做一个，希望能有空闲时间将这个项目做完！</description>
+    <modules>
+        <module>DoIt-common</module>
+        <module>DoIt-common</module>
+    </modules>
+
+    <properties>
+        <spring-boot.version>3.2.2</spring-boot.version>
+        <commons.lang.version>3.9</commons.lang.version>
+        <mysql.connector.version>8.0.32</mysql.connector.version>
+        <fastjson.version>1.2.83</fastjson.version>
+        <lombok.version>1.18.30</lombok.version>
+        <jakarta.servlet.api.version>6.0.0</jakarta.servlet.api.version>
+        <transmittable.thread.local.version>2.14.3</transmittable.thread.local.version>
+        <hutool.version>5.6.7</hutool.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- SpringBoot的依赖配置-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+
+            <!--servlet相关-->
+            <dependency>
+                <groupId>jakarta.servlet</groupId>
+                <artifactId>jakarta.servlet-api</artifactId>
+                <version>${jakarta.servlet.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>transmittable-thread-local</artifactId>
+                <version>${transmittable.thread.local.version}</version>
+            </dependency>
+
+
+            <!--数据库连接-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.connector.version}</version>
+            </dependency>
+
+            <!--对常用类操作的增强包-->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons.lang.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <!--基础工具包-->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
 </project>
