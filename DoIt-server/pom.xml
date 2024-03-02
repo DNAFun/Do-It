@@ -25,6 +25,7 @@
         <jakarta.servlet.api.version>6.0.0</jakarta.servlet.api.version>
         <transmittable.thread.local.version>2.14.3</transmittable.thread.local.version>
         <hutool.version>5.6.7</hutool.version>
+        <swagger.version>4.5.0</swagger.version>
     </properties>
 
     <dependencyManagement>
@@ -56,13 +57,20 @@
                 <version>${transmittable.thread.local.version}</version>
             </dependency>
 
-
             <!--数据库连接-->
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.connector.version}</version>
             </dependency>
+
+            <!--Swagger3-->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+
 
             <!--对常用类操作的增强包-->
             <dependency>

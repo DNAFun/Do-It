@@ -14,6 +14,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>DoIt-common-core</module>
+        <module>DoIt-common-swagger</module>
     </modules>
 
 </project>
