@@ -13,7 +13,7 @@
     <description>因为市面上的TO-DO工具都感觉缺点意思，所以打算自己做一个，希望能有空闲时间将这个项目做完！</description>
     <modules>
         <module>DoIt-common</module>
-        <module>DoIt-common</module>
+        <module>DoIt-service</module>
     </modules>
 
     <properties>
@@ -26,6 +26,8 @@
         <transmittable.thread.local.version>2.14.3</transmittable.thread.local.version>
         <hutool.version>5.6.7</hutool.version>
         <swagger.version>4.5.0</swagger.version>
+        <mybatisplus.version>3.5.5</mybatisplus.version>
+        <redis.version>3.2.2</redis.version>
     </properties>
 
     <dependencyManagement>
@@ -64,11 +66,25 @@
                 <version>${mysql.connector.version}</version>
             </dependency>
 
+            <!--MyBatisPlus-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatisplus.version}</version>
+            </dependency>
+
             <!--Swagger3-->
             <dependency>
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
                 <version>${swagger.version}</version>
+            </dependency>
+
+            <!--Redis-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+                <version>${redis.version}</version>
             </dependency>
 
 

@@ -11,7 +11,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="DoIt-common-swagger" />
+        <module name="DoIt-common-util" />
+        <module name="DoIt-service" />
         <module name="DoIt-common-core" />
+        <module name="DoIt-common-mybatisplus" />
       </profile>
     </annotationProcessing>
   </component>

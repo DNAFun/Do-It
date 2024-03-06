@@ -9,14 +9,6 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>DoIt-common</artifactId>
-    <version>1.0.0</version>
-    <packaging>pom</packaging>
-    <modules>
-        <module>DoIt-common-core</module>
-        <module>DoIt-common-swagger</module>
-        <module>DoIt-common-mybatisplus</module>
-        <module>DoIt-common-util</module>
-    </modules>
+    <artifactId>DoIt-service</artifactId>
 
 </project>
